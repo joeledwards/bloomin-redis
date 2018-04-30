@@ -1,0 +1,21 @@
+{
+  "name": "bloomin-redis",
+  "version": "1.0.0",
+  "description": "Testing bloom filter supplied by rebloom Redis module",
+  "scripts": {
+    "start": "nodemon /opt/app/bloom.js"
+  },
+  "keywords": [],
+  "author": "Joel Edwards <joeledwards@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@buzuli/color": "^1.2.0",
+    "@buzuli/throttle": "^2.0.2",
+    "durations": "^3.4.1",
+    "ioredis": "^3.2.2",
+    "log-a-log": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}

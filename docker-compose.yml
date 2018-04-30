@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  redis:
+    image: redislabs/rebloom
+  node:
+    image: node
+    working_dir: /opt/app
+    volumes:
+      - ./:/opt/app
+    command: npm start
