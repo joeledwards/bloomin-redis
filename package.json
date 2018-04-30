@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Testing bloom filter supplied by rebloom Redis module",
   "scripts": {
+    "docker": "docker-compose kill; docker-compose rm; docker-compose up",
     "start": "nodemon /opt/app/bloom.js"
   },
   "keywords": [],

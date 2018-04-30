@@ -2,9 +2,18 @@ version: "3.3"
 services:
   redis:
     image: redislabs/rebloom
+    volumes:
+      - ./:/opt/config
+    command: redis-server /opt/config/rebloom.conf
+
   node:
+    depends_on:
+      - redis
     image: node
     working_dir: /opt/app
     volumes:
       - ./:/opt/app
+    environment:
+      BLOOMIN_HOST: 'redis'
+      BLOOMIN_AUTH: 'none-shall-pass'
     command: npm start
